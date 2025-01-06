@@ -95,40 +95,73 @@
 
 // alert("Your generation is: Alpha");
 
-let age = prompt("What is your age?");
+// let age = null;
 
 // Check that the age is a number greater than -1
 
-const isGreaterThanOrEqualToZero = age >= 0;
+// do {
+//   let message = "Please enter your age";
 
-console.log(isGreaterThanOrEqualToZero);
+//   if (age != null) {
+//     message = "Please enter a valid age (0 or a positive number)";
+//   }
 
-if (!isGreaterThanOrEqualToZero) {
-  age = prompt("Please enter a valid value for your age");
-}
+//   age = prompt(message);
+// } while (!(age >= 0) || (typeof age == "string" && age.trim() == ""));
 
-const currentYear = new Date().getFullYear();
+// if (age == null) {
+//   alert("Goodbye!");
+//   throw new Error("Process cancelled");
+// }
 
-const dob = currentYear - age;
+// const currentYear = new Date().getFullYear();
 
-let generation;
+// const dob = currentYear - age;
 
-if (dob >= 1883 && dob <= 1900) {
-  generation = "Lost Generation";
-} else if (dob <= 1927) {
-  generation = "Greatest Generation";
-} else if (dob <= 1945) {
-  generation = "Silent Generation";
-} else if (dob <= 1964) {
-  generation = "Baby Boomers";
-} else if (dob <= 1980) {
-  generation = "Generation X";
-} else if (dob <= 1996) {
-  generation = "Millennials";
-} else if (dob <= 2012) {
-  generation = "Generation Z";
-} else if (dob <= currentYear) {
-  generation = "Generation Alpha";
-}
+// let generation;
 
-alert(`You belong to the ${generation}`);
+// if (dob >= 1883 && dob <= 1900) {
+//   generation = "Lost Generation";
+// } else if (dob <= 1927) {
+//   generation = "Greatest Generation";
+// } else if (dob <= 1945) {
+//   generation = "Silent Generation";
+// } else if (dob <= 1964) {
+//   generation = "Baby Boomers";
+// } else if (dob <= 1980) {
+//   generation = "Generation X";
+// } else if (dob <= 1996) {
+//   generation = "Millennials";
+// } else if (dob <= 2012) {
+//   generation = "Generation Z";
+// } else if (dob <= currentYear) {
+//   generation = "Generation Alpha";
+// }
+
+// alert(`You belong to the ${generation}`);
+
+// let selection = null;
+
+// let balance = 0;
+
+// do {
+//   selection = prompt(
+//     "What do you want to do?\n1 - Deposit\n2 - Withdraw\n0 - Cancel"
+//   );
+
+//   console.log(selection);
+
+//   if (selection == 1) {
+//     // Deposit
+//     let amount = prompt("How much do you want to deposit?");
+
+//     balance += parseInt(amount);
+//   } else if (selection == 2) {
+//     // Withdraw
+//     let amount = prompt("How much do you want to withdraw?");
+
+//     balance -= parseInt(amount);
+//   }
+
+//   alert(`Your new balance is ${balance}.`);
+// } while (selection == 1 || selection == 2);
