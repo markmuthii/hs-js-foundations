@@ -105,27 +105,27 @@ let key = prompt("What is the key?");
 
 // Encryption and Decryption
 
-function cipher(a, m, k) {
+function cipher(action, message, key) {
   let newMessage = "";
 
   // Get each character in the message, and get its unicode value
-  for (let i = 0; i < m.length; i++) {
-    const uv = m.charCodeAt(i);
-    let nuv;
+  for (let i = 0; i < message.length; i++) {
+    const unicodeValue = message.charCodeAt(i);
+    let newUnicodeValue;
 
-    if (a == 1) {
+    if (action == 1) {
       // If the action is encryption, add the constant to the unicode value
-      nuv = uv + k;
+      newUnicodeValue = unicodeValue + key;
     } else {
       // If the action is decryption, subtract the constant from the unicode value
-      nuv = uv - k;
+      newUnicodeValue = unicodeValue - key;
     }
 
     // Get the character from the new unicode value (the one that you got after either adding or subtracting the constant from the original character'S unicode value in the message)
-    const nc = String.fromCharCode(nuv);
+    const newCharacter = String.fromCharCode(newUnicodeValue);
 
     // Append the character to a new message
-    newMessage += nc;
+    newMessage += newCharacter;
   }
 
   // return the new message
