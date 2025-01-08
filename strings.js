@@ -1,15 +1,18 @@
-// Length (property)
-// let text = "Hello World!";
+let text = "Hello World!";
 
-// console.log(text.length); // 12
+// Length (property)
+console.log("Length:");
+console.log(text.length); // 12
 
 // String Methods
 
 // charAt()
-// console.log(text.charAt(2));
+console.log("charAt():");
+console.log(text.charAt(20));
 
 // charCodeAt()
-// console.log(text.charCodeAt(0));
+console.log("charCodeAt():");
+console.log(text.charCodeAt(0));
 
 // let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 
@@ -96,40 +99,159 @@
 // STEPS:
 
 // Prompt the user for the action (encrypt/decrypt)
-let action = prompt("What do you want to do? \n1. Encrypt \n2. Decrypt");
-// // Prompt the user for the message
-let message = prompt("What is the message?");
+// let action = prompt("What do you want to do? \n1. Encrypt \n2. Decrypt");
+// // // Prompt the user for the message
+// let message = prompt("What is the message?");
 
-// // Prompt the user for the key
-let key = prompt("What is the key?");
+// // // Prompt the user for the key
+// let key = prompt("What is the key?");
 
-// Encryption and Decryption
+// // Encryption and Decryption
 
-function cipher(action, message, key) {
-  let newMessage = "";
+// function cipher(action, message, key) {
+//   let newMessage = "";
 
-  // Get each character in the message, and get its unicode value
-  for (let i = 0; i < message.length; i++) {
-    const unicodeValue = message.charCodeAt(i);
-    let newUnicodeValue;
+//   // Get each character in the message, and get its unicode value
+//   for (let i = 0; i < message.length; i++) {
+//     const unicodeValue = message.charCodeAt(i);
+//     let newUnicodeValue;
 
-    if (action == 1) {
-      // If the action is encryption, add the constant to the unicode value
-      newUnicodeValue = unicodeValue + key;
-    } else {
-      // If the action is decryption, subtract the constant from the unicode value
-      newUnicodeValue = unicodeValue - key;
-    }
+//     if (action == 1) {
+//       // If the action is encryption, add the constant to the unicode value
+//       newUnicodeValue = unicodeValue + key;
+//     } else {
+//       // If the action is decryption, subtract the constant from the unicode value
+//       newUnicodeValue = unicodeValue - key;
+//     }
 
-    // Get the character from the new unicode value (the one that you got after either adding or subtracting the constant from the original character'S unicode value in the message)
-    const newCharacter = String.fromCharCode(newUnicodeValue);
+//     // Get the character from the new unicode value (the one that you got after either adding or subtracting the constant from the original character'S unicode value in the message)
+//     const newCharacter = String.fromCharCode(newUnicodeValue);
 
-    // Append the character to a new message
-    newMessage += newCharacter;
-  }
+//     // Append the character to a new message
+//     newMessage += newCharacter;
+//   }
 
-  // return the new message
-  return newMessage;
-}
+//   // return the new message
+//   return newMessage;
+// }
 
-alert(cipher(action, message, parseInt(key)));
+// alert(cipher(action, message, parseInt(key)));
+
+// at()
+console.log("at():");
+console.log(text.at(19));
+
+// property Access
+console.log(text[4]);
+console.log(text[19]);
+
+// slice()
+console.log(text.slice(4, 8));
+console.log(text.slice(-4, -1));
+console.log(text.slice(-4));
+console.log(text.slice());
+
+// let text = "Hello World!";
+// subString()
+console.log(text.substring(2, 8));
+console.log(text.substring(2, 0));
+console.log(text.substring(2, -7));
+console.log(text.substring(2));
+console.log(text.substring());
+console.log(text.substring(undefined, 5));
+
+// let text = "Hello World!";
+// subStr()
+console.log(text.substr(2, 4));
+console.log(text.substr(2));
+console.log(text.substr(6, 0));
+console.log(text.substr(6, -2));
+console.log(text.substr());
+console.log(text.substr(-4, 2));
+console.log(text.substr(-4, -2));
+console.log(text.substr(undefined, 5));
+
+// let text = "Hello World!";
+// concat()
+
+// text + " and welcome"
+console.log(text.concat(" and welcome", " this is another string", "!"));
+
+// toUpperCase()
+console.log(text.toUpperCase());
+
+// toLowerCase()
+console.log(text.toLowerCase());
+
+// trim()
+let text2 = "             mark@kram.codes                 ";
+let text3 = "mark@kram.codes";
+
+console.log(text2.length);
+console.log(text3.length);
+
+console.log(text2.trim() === text3);
+
+// trimStart()
+console.log(text2.trimStart());
+
+// trimEnd()
+console.log(text2.trimEnd().length);
+
+// repeat()
+console.log(text.repeat(5));
+
+// let text = "Hello World!";
+
+// replace()
+console.log(text.replace("Hello", "Hi"));
+
+// padStart()
+console.log(text.padStart(30, "Start"));
+
+// padEnd()
+console.log(text.padEnd(30, "End"));
+
+// let text = "Hello World!";
+
+// indexOf()
+console.log(text.indexOf("ello"));
+console.log(text.indexOf("Ello"));
+console.log(text.indexOf("zoro"));
+console.log(text.indexOf("World", 7));
+console.log(text.indexOf("ld", 7));
+
+// let text = "Hello World!";
+
+// includes()
+console.log(text.includes("Hello"));
+console.log(text.includes("hello"));
+console.log(text.includes("Hello", 3));
+
+// startsWith()
+console.log(text.startsWith("Hel"));
+console.log(text.startsWith("hel"));
+console.log(text.startsWith("zoro"));
+console.log(text.startsWith("Wor"));
+console.log(text.startsWith("Wor", 6));
+
+// let text = "Hello World!";
+
+// endsWith()
+console.log(text.endsWith("rld!"));
+console.log(text.endsWith("Rld!"));
+console.log(text.endsWith("zoro!"));
+console.log(text.endsWith("zoro!"));
+console.log(text.endsWith("llo"));
+console.log(text.endsWith("Hell", 4));
+
+// let text = "Hello World!";
+
+// replaceAll()
+console.log(text.replaceAll("l", "r"));
+console.log(text.replace("l", "r"));
+
+text = "hello world from mars";
+
+// split()
+console.log(text.split(" "));
