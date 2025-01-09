@@ -294,5 +294,14 @@ const toPascalCase = (input) => {
   return output;
 };
 
+const toPascalCaseShortened = (input) => {
+  return input
+    .split(" ")
+    .map((word) => word[0].toUpperCase() + word.slice(1).toLowerCase())
+    .join(" ");
+};
+
 console.log(toPascalCase("HELLO woRlD"));
+console.log(toPascalCaseShortened("HELLO woRlD"));
 console.log(toPascalCase("this is a javascript Exercise"));
+console.log(toPascalCaseShortened("this is a javascript Exercise"));
