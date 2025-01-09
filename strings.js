@@ -255,3 +255,44 @@ text = "hello world from mars";
 
 // split()
 console.log(text.split(" "));
+
+// Using your knowledge of string and array methods, write a function that takes a string as an argument, and returns the string in Pascal Case.
+
+// Eg:
+// - `toPascalCase("hello world")` will return `"Hello World"`
+// - `toPascalCase("this is a javascript Exercise")` will return `"This Is A Javascript Exercise"`
+
+const toPascalCase = (input) => {
+  // Get each of the words in the string
+
+  const inputArray = input.split(" ");
+
+  // ["Hello", "World"]
+
+  const updatedArray = inputArray.map((word) => {
+    // For each word:
+    // get the first letter and convert it to Uppercase
+    const firstLetter = word[0];
+    const firstUpper = firstLetter.toUpperCase();
+
+    // get the rest of the letters and convert them to lowercase
+    const restOfLetters = word.slice(1);
+    const restLower = restOfLetters.toLowerCase();
+
+    // join them (ie the first letter and the rest of the letters)
+    const newWord = firstUpper + restLower; //World
+
+    return newWord;
+  });
+
+  // ["Hello", "World"]
+
+  // Take all the words and have them as one sentence
+  const output = updatedArray.join(" ");
+
+  // Return the sentence
+  return output;
+};
+
+console.log(toPascalCase("HELLO woRlD"));
+console.log(toPascalCase("this is a javascript Exercise"));
