@@ -77,33 +77,33 @@ MUST USE FUNCTIONS
 //   return number % 2 === 0;
 // };
 
-// const getGeneration = (year) => {
-//   let generation;
+const getGeneration = (year) => {
+  let generation;
 
-//   let currentYear = new Date().getFullYear();
+  let currentYear = new Date().getFullYear();
 
-//   if (year >= 1883 && year <= 1900) {
-//     generation = "Lost Generation";
-//   } else if (year <= 1927) {
-//     generation = "Greatest Generation";
-//   } else if (year <= 1945) {
-//     generation = "Silent Generation";
-//   } else if (year <= 1964) {
-//     generation = "Baby Boomers Generation";
-//   } else if (year <= 1980) {
-//     generation = "Generation X";
-//   } else if (year <= 1996) {
-//     generation = "Millennials Generation";
-//   } else if (year <= 2012) {
-//     generation = "Generation Z";
-//   } else if (year <= currentYear) {
-//     generation = "Generation Alpha";
-//   } else {
-//     generation = "";
-//   }
+  if (year >= 1883 && year <= 1900) {
+    generation = "Lost Generation";
+  } else if (year <= 1927) {
+    generation = "Greatest Generation";
+  } else if (year <= 1945) {
+    generation = "Silent Generation";
+  } else if (year <= 1964) {
+    generation = "Baby Boomers Generation";
+  } else if (year <= 1980) {
+    generation = "Generation X";
+  } else if (year <= 1996) {
+    generation = "Millennials Generation";
+  } else if (year <= 2012) {
+    generation = "Generation Z";
+  } else if (year <= currentYear) {
+    generation = "Generation Alpha";
+  } else {
+    generation = "";
+  }
 
-//   return generation;
-// };
+  return generation;
+};
 
 // const promptUser = (yearMessage = "Q1", actionMessage = "Q2") => {
 //   yearInput = prompt(yearMessage);
